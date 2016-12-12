@@ -27,6 +27,7 @@ public class ActivityOne extends ActivityBase {
         super.onCreate(savedInstanceState);
 
         Menu bottomNavigationViewMenu = mBottomNav.getMenu();
+
         bottomNavigationViewMenu.findItem(R.id.action_webshop).setChecked(false);
         bottomNavigationViewMenu.findItem(R.id.action_scanner).setChecked(true);
     }
