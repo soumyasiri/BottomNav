@@ -1,5 +1,5 @@
+
 general:
-// Build config
   branches:
     only:
       - master
