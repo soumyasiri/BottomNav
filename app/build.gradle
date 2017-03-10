@@ -17,6 +17,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        free {
+            applicationId "com.soumyasiricilla.bottomnav.free"
+        }
+        paid {
+            applicationId "com.soumyasiricilla.bottomnav.paid"
+        }
+    }
 }
 
 dependencies {
