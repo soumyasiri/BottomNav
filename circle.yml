@@ -1,6 +1,6 @@
-
-general:
-  branches:
-    only:
-      - master
-      - develop
+#
+#general:
+#  branches:
+#    only:
+#      - master
+#      - develop
