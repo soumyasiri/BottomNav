@@ -1,0 +1,6 @@
+general:
+
+  branches:
+    only:
+      - master
+      - develop
