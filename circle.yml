@@ -4,5 +4,5 @@
 
 general:
   branches:
-    ignore:
-      - develop
+    only:
+      - master
