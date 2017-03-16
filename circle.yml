@@ -1,5 +1,8 @@
+#
+#  Build Configuration for continuous integration
+#
 
 general:
   branches:
-    only:
-      - master
+    ignore:
+      - develop
