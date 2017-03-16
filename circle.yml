@@ -1,3 +1,6 @@
+#
+#  Build Configuration for continuous integration
+#
 
 general:
   branches:
