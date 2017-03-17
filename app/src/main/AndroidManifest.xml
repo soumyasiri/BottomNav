@@ -20,6 +20,13 @@
 
         </activity>
         <activity android:name=".ActivityThree"/>
+
+        <meta-data
+            android:name="net.hockeyapp.android.appIdentifier"
+            android:value="@string/hockey_app_id" />
+        <meta-data
+            android:name="net.hockeyapp.android.appSecret"
+            android:value="@string/hockey_app_secret" />
     </application>
 
 </manifest>

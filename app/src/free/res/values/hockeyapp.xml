@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="hockey_app_id">746bd5458651410aab6c959ddf9e1bae</string>
+    <string translatable="false" name="hockey_app_secret">477ef67cfa18f1ffd39fd533c00efbe4</string>
+</resources>

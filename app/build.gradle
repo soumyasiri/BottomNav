@@ -1,5 +1,34 @@
 apply plugin: 'com.android.application'
 
+
+project.ext{
+
+    versionName = "1.0"
+    versionCode = 1
+
+}
+
+project.afterEvaluate {
+
+    preBuild{}.dependsOn updateProjectVersion
+
+}
+
+task updateProjectVersion() {
+    println( "Updating project version from CI" )
+
+    if (project.hasProperty("CIversionName")) {
+        println( "Version name: " + CIversionName )
+        project.ext.versionName = CIversionName
+    }
+
+    if (project.hasProperty("CIversionCode")) {
+        println( "Version Code: " + CIversionCode )
+        project.ext.versionCode = CIversionCode
+    }
+
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -35,7 +64,9 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
+    compile 'net.hockeyapp.android:HockeySDK:4.1.1'
     testCompile 'junit:junit:4.12'
 
 
 }
+clean.dependsOn updateProjectVersion
