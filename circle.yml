@@ -5,7 +5,7 @@ machine:
 
   environment:
 
-    APK_PATH: '/outputs/apk/app-paid-release.apk'
+    APK_PATH: '/home/ubuntu/BottomNav/app/build/outputs/apk/app-paid-release.apk'
 
   java:
     version: oraclejdk8
@@ -20,7 +20,7 @@ dependencies:
 test:
     override:
         - ./gradlew assembleRelease -PCIversionName=$APP_VERSION_NAME -PCIversionCode=$((APP_VERSION_CODE+1))
-        - cp -r app/build/outputs/ $CIRCLE_ARTIFACTS
+#        - cp -r app/build/outputs/ $CIRCLE_ARTIFACTS
 
 
 general:
@@ -32,5 +32,5 @@ deployment:
       develop:
         branch: master
         commands:
-#          - ./scripts/deploy_release.sh
-          - ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_BOTTOMNAV_RELEASE_APP_ID
+          - ./scripts/deploy_release.sh
+#          - ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_BOTTOMNAV_RELEASE_APP_ID
