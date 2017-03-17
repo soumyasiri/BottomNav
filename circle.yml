@@ -20,7 +20,7 @@ dependencies:
 test:
     override:
         - ./gradlew assembleRelease -PCIversionName=$APP_VERSION_NAME -PCIversionCode=$((APP_VERSION_CODE+1))
-#        - cp -r app/build/outputs/ $CIRCLE_ARTIFACTS
+        - cp -r app/build/outputs/apk $CIRCLE_ARTIFACTS
 
 
 general:
