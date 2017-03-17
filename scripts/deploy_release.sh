@@ -5,7 +5,7 @@ echo "Deployment Started!"
 #$CIRCLE_ARTIFACTS/app/outputs/apk/app-debug.apk
 
 #APK_PATH=$CIRCLE_ARTIFACTS/app/outputs/apk/app-paid-release.apk
-APK_PATH=$/home/ubuntu/BottomNav/app/build/outputs/apk/app-paid-release.apk
+APK_PATH=$app/build/outputs/apk/app-paid-release.apk
 
 echo $APK_PATH
 
