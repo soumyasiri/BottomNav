@@ -2,9 +2,9 @@
 
 echo "Deployment Started!"
 
-#APK_PATH=$1
+APK_PATH=$1
 
-APK_PATH=$app/build/outputs/apk/app-free-debug.apk
+#APK_PATH=$app/build/outputs/apk/app-free-debug.apk
 
 echo $APK_PATH
 

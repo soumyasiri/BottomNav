@@ -7,7 +7,7 @@ machine:
     # Date format to be used in naming
     # yyyymmddHHMM
     VERSION_DATE : $(date +%Y%m%d%k%M)
-#    APK_PATH: $DEBUG_APK_PATH
+    APK_PATH: '/outputs/apk/app-free-debug.apk'
 
   java:
     version: oraclejdk8
@@ -22,7 +22,7 @@ dependencies:
 test:
     override:
         - ./gradlew assembleDebug -PCIversionName=$APP_VERSION_NAME -PCIversionCode=$((APP_VERSION_CODE+1))
-#        - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+        - cp -r app/build/outputs $CIRCLE_ARTIFACTS
 
 
 general:
@@ -34,5 +34,5 @@ deployment:
       develop:
         branch: master
         commands:
-          - sh ./scripts/deploy_release.sh
+          - sh ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH
 #           - sh ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_APP_ID
