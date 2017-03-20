@@ -2,7 +2,9 @@
 
 echo "Deployment Started!"
 
-APK_PATH=$'/outputs/apk/app-free-debug.apk'
+PATH=$'/outputs/apk/app-free-debug.apk'
+
+APK_PATH = $CIRCLE_ARTIFACTS$PATH
 
 echo $APK_PATH
 
