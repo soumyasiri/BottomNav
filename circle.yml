@@ -35,4 +35,4 @@ deployment:
         branch: master
         commands:
 #          - sh ./scripts/deploy_release.sh
-          - ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_APP_ID
+           - sh ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_APP_ID
