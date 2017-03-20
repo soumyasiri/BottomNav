@@ -2,15 +2,15 @@
 
 echo "Deployment Started!"
 
-APK_PATH=$1
+APK_PATH=$'/outputs/apk/app-free-debug.apk'
 
 echo $APK_PATH
 
-HOCKEYAPP_ACCESS_TOKEN=$2
+HOCKEYAPP_ACCESS_TOKEN=$'6acc6ee71e2541bf810c974b7e6cef8b'
 
 echo $HOCKEYAPP_ACCESS_TOKEN
 
-HOCKEYAPP_APP_ID=$3
+HOCKEYAPP_APP_ID=$'746bd5458651410aab6c959ddf9e1bae'
 
 echo $HOCKEYAPP_APP_ID
 
