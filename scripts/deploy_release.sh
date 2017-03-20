@@ -10,15 +10,15 @@ HOCKEYAPP_ACCESS_TOKEN=$2
 
 echo $HOCKEYAPP_ACCESS_TOKEN
 
-HOCKEYAPP_BOTTOMNAV_RELEASE_APP_ID=$3
+HOCKEYAPP_APP_ID=$3
 
-echo $HOCKEYAPP_BOTTOMNAV_RELEASE_APP_ID
+echo $HOCKEYAPP_APP_ID
 
 curl \
 -F "status=2" \
 -F "notify=2" \
 -F "ipa=@$APK_PATH" \
 -H "X-HockeyAppToken:$HOCKEYAPP_ACCESS_TOKEN" \
-https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_BOTTOMNAV_RELEASE_APP_ID/app_versions/upload
+https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
 
 echo "Deployment finished!"

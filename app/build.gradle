@@ -39,6 +39,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
     }
     buildTypes {
         release {
@@ -51,9 +53,11 @@ android {
     productFlavors {
         free {
             applicationId "com.soumyasiricilla.bottomnav.free"
+            manifestPlaceholders = [HOCKEYAPP_APP_ID: "746bd5458651410aab6c959ddf9e1bae"]
         }
         paid {
             applicationId "com.soumyasiricilla.bottomnav.paid"
+            manifestPlaceholders = [HOCKEYAPP_APP_ID: "2d8b61d5198a4c0293969a3e8c111d3a"]
         }
     }
 }
