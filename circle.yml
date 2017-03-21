@@ -7,7 +7,8 @@ machine:
     # Date format to be used in naming
     # yyyymmddHHMM
     VERSION_DATE : $(date +%Y%m%d%k%M)
-    APK_PATH: '/outputs/apk/app-free-debug.apk'
+    APK_FREE_PATH: '/outputs/apk/app-free-debug.apk'
+    APK_PAID_PATH: '/outputs/apk/app-paid-debug.apk'
 
   java:
     version: oraclejdk8
@@ -34,5 +35,8 @@ deployment:
       develop:
         branch: master
         commands:
-          - sh ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH
+#          - sh ./scripts/deploy_release.sh $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_APP_ID
 #           - sh ./scripts/deploy_release.sh $CIRCLE_ARTIFACTS$APK_PATH $HOCKEYAPP_ACCESS_TOKEN $HOCKEYAPP_APP_ID
+
+            - sh ./scripts/deploy_free.sh $CIRCLE_ARTIFACTS$APK_FREE_PATH
+            - sh ./scripts/deploy_paid.sh $CIRCLE_ARTIFACTS$APK_PAID_PATH
