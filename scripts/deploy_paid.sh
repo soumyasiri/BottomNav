@@ -16,9 +16,12 @@ HOCKEYAPP_APP_ID='2d8b61d5198a4c0293969a3e8c111d3a'
 
 echo $HOCKEYAPP_APP_ID
 
+NOTES=$'app/release_notes.txt'
+
 curl \
 -F "status=2" \
 -F "notify=2" \
+-F "notes=$NOTES" \
 -F "ipa=@$APK_PATH" \
 -H "X-HockeyAppToken:$HOCKEYAPP_ACCESS_TOKEN" \
 https://rink.hockeyapp.net/api/2/apps/$HOCKEYAPP_APP_ID/app_versions/upload
